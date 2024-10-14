@@ -1,0 +1,205 @@
+/* Body */
+
+body {
+  background-color: #177D6b;
+  font-family: "Quicksand", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Container */
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  height: 100vh;
+  align-items: center; /* Align closer to the top */
+  padding: 20px;
+  margin-top: 20px; /* Reduced space from top */
+  animation: fadeIn 1s ease-in-out; /* Fade-in animation for the entire container */
+}
+
+/* Main Box */
+.whiteBck {
+  background-color: white;
+  width: 95%;
+  height: 90vh;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.2s ease-in-out; /* Simple shadow transition */
+  animation: slideUp 0.7s ease-out; /* Slide-up animation on load */
+}
+
+.whiteBck:hover {
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow on hover */
+}
+
+/* Header */
+.header {
+  text-align: center;
+}
+
+.header h1 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #106b;
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards 0.5s; /* Fade-in with slight delay */
+}
+
+/* Inputs */
+.inputs {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 10%;
+  margin-right: 10%;
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards 0.8s; /* Fade-in with delay */
+}
+
+.inputs input {
+  background-color: rgba(213, 226, 210, 0.733);
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid #106b;
+  padding-left: 20px;
+  margin-bottom: 15px;
+  transition: border-color 0.2s ease-in-out; /* Simple border color transition */
+}
+
+.inputs input:focus {
+  border-color: #177D6b; /* Change border color on focus */
+}
+
+/* Buttons */
+.buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  gap: 20px;
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards 1s; /* Fade-in with delay */
+}
+
+.buttons button {
+  padding-left: 30px;
+  padding-right: 30px;
+  border-radius: 5px;
+  height: 50px;
+  background-color: #177D6b;
+  color: white;
+  font-size: 17px;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.2s ease-in-out; /* Simple color transition */
+}
+
+.buttons button:hover {
+  background-color: #45a049;
+}
+
+/* History */
+.head-history {
+  text-align: center;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards 1.2s; /* Fade-in with delay */
+}
+
+.table {
+  display: flex;
+  justify-content: center;
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards 1.4s; /* Fade-in with delay */
+}
+
+table {
+  border-spacing: 20px 0px; /* Adds space between columns */
+}
+
+/* Fade-in and Slide-up animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .whiteBck {
+    width: 100%;
+    height: auto;
+  }
+
+  .inputs input {
+    height: 35px;
+    font-size: 14px;
+  }
+
+  .buttons button {
+    height: 40px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    background-color: rgb(166, 224, 164);
+  }
+  .whiteBck {
+    width: 100%;
+    margin-top: 200px;
+    height: auto;
+  }
+
+  .inputs input {
+    height: 30px;
+    font-size: 12px;
+  }
+
+  .buttons {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Center buttons on mobile */
+    gap: 10px;
+    margin-top: 50px; /* Added 50px margin-top */
+  }
+
+  .buttons button {
+    height: 35px;
+    width: 50%; /* Center and reduce width of buttons */
+    font-size: 14px;
+  }
+
+  .table {
+    width: 100%;
+  }
+}
+footer p {
+  color: white;
+}
+a{
+  color: rgb(0, 255, 217);
+}
+a:hover{
+  color: wheat;
+}
